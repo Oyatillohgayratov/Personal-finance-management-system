@@ -1,0 +1,13 @@
+app:
+  name: notifaction-server
+  env: dev
+notifactionserver:
+  http:
+    host: "localhost"
+    port: "8080"
+kafkaserver:
+  group: "notifaction-group"
+  topic: "notifications"
+  http:
+    host: "localhost"
+    port: "9092"

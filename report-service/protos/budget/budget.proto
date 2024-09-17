@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+option go_package = "./budget";
+
+service BudgetService {
+  rpc CreateBudget (CreateBudgetRequest) returns (CreateBudgetResponse);
+  rpc GetBudgets (GetBudgetsRequest) returns (GetBudgetsResponse);
+  rpc UpdateBudget (UpdateBudgetRequest) returns (UpdateBudgetResponse);
+}
+
+message CreateBudgetRequest {
+  string userId = 1;
+  string category = 2;
+  double amount = 3;
+  string currency = 4;
+}
+
+message CreateBudgetResponse {
+  string message = 1;
+  string budgetId = 2;
+}
+
+message GetBudgetsRequest {
+  string userId = 1;
+}
+
+message Budget {
+  string budgetId = 1;
+  string category = 2;
+  double amount = 3;
+  double spent = 4;
+  string currency = 5;
+}
+
+message GetBudgetsResponse {
+  repeated Budget budgets = 1;
+}
+
+message UpdateBudgetRequest {
+  string budgetId = 1;
+  double amount = 2;
+}
+
+message UpdateBudgetResponse {
+  string message = 1;
+}

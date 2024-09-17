@@ -1,0 +1,23 @@
+app:
+  name: api-gateway
+  env: dev
+apigateway:
+  http:
+    host: "localhost"
+    port: "4040"
+budgetserver:
+  http:
+    host: "localhost"
+    port: "5050"
+incomeandexpensesserver:
+  http:
+    host: "localhost"
+    port: "6060"
+userserver:
+  http:
+    host: "localhost"
+    port: "7070"
+reportingserver:
+  http:
+    host: "localhost"
+    port: "9090"
